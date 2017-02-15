@@ -10,6 +10,10 @@
             <field name="name">sale.order.calendar</field>
             <field name="model">sale.order</field>
             <field name="arch" type="xml">
+		<header> solofo
+		  <button name="do_confirm" string="Confirm" type="object"/>	
+		  <field name="state" widget="statusbar" statusbar_colors='{"draft":"blue","confirmed":"red"}'/>							
+		</header>
                 <calendar string="Sales Orders" color="state" date_start="date_order">
                     <field name="partner_id"/>
                     <field name="amount_total"/>
